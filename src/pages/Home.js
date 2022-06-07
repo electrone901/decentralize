@@ -7,16 +7,13 @@ import TweetInFeed from "../components/TweetInFeed";
 import { useMoralis, useWeb3ExecuteFunction } from "react-moralis";
 
 const Home = () => {
-
   const { Moralis } = useMoralis();
   const user = Moralis.User.current();
   const contractProcessor = useWeb3ExecuteFunction();
-
   const inputFile = useRef(null);
   const [selectedFile, setSelectedFile] = useState();
   const [theFile, setTheFile] = useState();
   const [tweet, setTweet] = useState();
-
   async function maticTweet() {
 
     if (!tweet) return;
