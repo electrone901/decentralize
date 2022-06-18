@@ -1,71 +1,116 @@
-import React from "react";
-import './Rightbar.css';
-import spaceshooter from "../images/spaceshooter.jpeg";
-import netflix from "../images/netflix.jpeg";
-import academy from "../images/academy.png";
-import youtube from "../images/youtube.png";
-import js from "../images/js.png";
-import { Input } from "web3uikit";
+import React from 'react'
+import './Rightbar.css'
+import spaceshooter from '../images/spaceshooter.jpeg'
+import netflix from '../images/netflix.jpeg'
+import academy from '../images/academy.png'
+import youtube from '../images/youtube.png'
+import js from '../images/js.png'
+import pfp3 from '../images/pfp3.png'
+import { Input } from 'web3uikit'
 
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
+import Divider from '@mui/material/Divider'
+import ListItemText from '@mui/material/ListItemText'
+import ListItemAvatar from '@mui/material/ListItemAvatar'
+import Avatar from '@mui/material/Avatar'
+import Typography from '@mui/material/Typography'
 
 const Rightbar = () => {
   const trends = [
     {
       img: spaceshooter,
-      text: "Learn how to build a Web3 FPS game using unity...",
-      link: "https://moralis.io/moralis-projects-learn-to-build-a-web3-space-fps-game/",
+      text:
+        'Decenttralize the next generation of blockchain social networks...',
+      link:
+        'https://medium.com/polkadot-ecosystem-promoteam/subsocial-the-next-all-in-one-generation-of-blockchain-social-networks-63401cce14bd',
     },
     {
-      img: netflix,
-      text: "The fisrt Moralis Project! Let's Netflix and chill...",
-      link: "https://moralis.io/moralis-projects-learn-to-build-a-web3-netflix-clone/",
+      img: pfp3,
+      text: 'Sixty-Four Squared: The Ultimate Pixel Art NFT...',
+      link:
+        'https://medium.com/@64squared/sixty-four-squared-the-ultimate-pixel-art-nft-f8d79e2311ac',
     },
     {
       img: academy,
-      text: "Master DeFi in 2022. Start  at the Moralis Academy...",
-      link: "https://academy.moralis.io/courses/defi-101",
+      text: 'Master DeFi in 2022. Start  at the Moralis Academy...',
+      link:
+        'https://medium.com/@galaxybchain/possible-impact-of-2nd-liquidity-generation-events-lge-2-on-core-ecosystem-and-to-those-who-will-fc206123c1c5',
     },
     {
       img: js,
-      text: "Become a Web3 Developer with just simple JS...",
-      link: "https://academy.moralis.io/all-courses",
+      text: 'Become a Web3 Developer with just simple JS...',
+      link: 'https://academy.moralis.io/all-courses',
     },
-    {
-      img: youtube,
-      text: "Best youtube channel to learn about Web3...",
-      link: "https://www.youtube.com/channel/UCgWS9Q3P5AxCWyQLT2kQhBw",
-    },
-  ];
+  ]
 
   return (
     <>
-    <div className="rightbarContent">
-      <Input
-        label="Search Twitter"
-        name ="Search Twitter"
-        prefixIcon="search"
-        labelBgColor="#141d26" 
-        >
-      </Input>
-
-    <div className="trends">
-      News For You
-      {trends.map((e) => {
-          return(
-            <>
-            <div className="trend" onClick={() => window.open(e.link)}>
-              <img src={e.img} className="trendImg"></img>
-              <div className="trendText">{e.text}</div>
-            </div>
-            </>
-          )
-      })}
-    </div>
-
-    </div>
+      <div className="rightbarContent">
+        <Input
+          label="Search decentralize"
+          name="Search decentralize"
+          prefixIcon="search"
+          labelBgColor="rgb(233 233 233 / 65%)"
+        ></Input>
+        <div className="trends">
+          <h2>Topics</h2>
+          Post and comment on specific topics.
+          <p className="topic-title"># instagood </p>
+          <p className="topic-description">
+            Pinned by community • 9.5K+ posts in this group
+          </p>
+          <p className="topic-title"># sports</p>
+          <p className="topic-description">
+            Pinned by admin • 8.5K+ posts in this group
+          </p>
+          <p className="topic-title"># photooftheday</p>
+          <p className="topic-description">
+            Pinned by admin • 7.5K+ posts in this group
+          </p>
+          <hr />
+          <h2>Trend Post </h2>
+          <List
+            sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
+          >
+            {trends.map((e) => {
+              return (
+                <>
+                  <ListItem
+                    alignItems="flex-start"
+                    onClick={() => window.open(e.link)}
+                  >
+                    <ListItemAvatar>
+                      <Avatar alt="Popular Articles" src={e.img} />
+                    </ListItemAvatar>
+                    <ListItemText
+                      primary={e.text}
+                      secondary={
+                        <React.Fragment>
+                          <Typography
+                            sx={{ display: 'inline' }}
+                            component="span"
+                            variant="body2"
+                            color="text.primary"
+                          >
+                            Ali Connors
+                          </Typography>
+                          {
+                            " — I'll be in your neighborhood doing errands this…"
+                          }
+                        </React.Fragment>
+                      }
+                    />
+                  </ListItem>
+                  <Divider variant="inset" component="li" />
+                </>
+              )
+            })}
+          </List>
+        </div>
+      </div>
     </>
-  );
-};
+  )
+}
 
-export default Rightbar;
-
+export default Rightbar
