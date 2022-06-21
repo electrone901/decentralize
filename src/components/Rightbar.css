@@ -55,3 +55,16 @@
     margin-top: -16px;
     font-weight: 300;
 }
+
+.connected-btn {
+    background-color: #06a51c !important;
+    margin-top: -14px !important;
+    max-width: 310px !important;
+    margin-bottom: 14px !important;
+}
+
+.signed {
+    color: black !important;
+    font-weight: 800;
+    margin-top: -14px !important;
+}

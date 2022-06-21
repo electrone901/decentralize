@@ -19,6 +19,7 @@
     justify-content: start;
     align-items: center;
     text-decoration: none !important;
+    padding-left: 3rem !important;
 }
 
 .menuItems {
@@ -37,7 +38,7 @@
 
 .menuItems:hover {
     cursor: pointer;
-    background-color: #74bdf6;
+    background-color: #06a51c;
     color: white !important;
 }
 
@@ -49,4 +50,5 @@
 
 .who {
     color: black;
+    max-width: 300px !important;
 }

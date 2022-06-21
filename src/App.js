@@ -53,19 +53,17 @@ const App = () => {
         <div className="page">
           <div className="sideBar">
             <Sidebar udUser={udUser} />
-            <Button
-              variant="contained"
-              color="secondary"
-              endIcon={<LogoutIcon />}
-              onClick={userLogOut}
-              className="logout-btn"
-            >
-              Logout
-            </Button>
-
-            {/* <div className="logout" onClick={userLogOut}>
-              Logout
-            </div> */}
+            <div className="logout-btn">
+              <Button
+                // variant="contained"
+                // color="secondary"
+                endIcon={<LogoutIcon />}
+                onClick={userLogOut}
+                style={{ marginLeft: '-5rem' }}
+              >
+                Logout
+              </Button>
+            </div>
           </div>
           <div className="mainWindow">
             <Routes>
@@ -75,7 +73,7 @@ const App = () => {
             </Routes>
           </div>
           <div className="rightBar">
-            <Rightbar />
+            <Rightbar udUser={udUser} />
           </div>
         </div>
       ) : (

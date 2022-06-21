@@ -8,7 +8,7 @@ export const walletconnect = { provider: 'walletconnect' }
 // This info comes from unstoppable dashboard
 UAuthMoralisConnector.setUAuthOptions({
   clientID: 'c62fca57-3071-44f8-b695-d83bacb7c35b',
-  redirectUri: 'http://localhost:3000',
+  redirectUri: 'https://decentralize-app.netlify.app/',
   // fallbackIssuer: process.env.REACT_APP_FALLBACK_ISSUER!,
   // Scope must include openid and wallet
   scope: 'openid wallet',

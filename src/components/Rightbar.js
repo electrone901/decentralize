@@ -1,12 +1,12 @@
 import React from 'react'
 import './Rightbar.css'
 import spaceshooter from '../images/spaceshooter.jpeg'
-import netflix from '../images/netflix.jpeg'
 import academy from '../images/academy.png'
-import youtube from '../images/youtube.png'
 import js from '../images/js.png'
 import pfp3 from '../images/pfp3.png'
 import { Input } from 'web3uikit'
+import Button from '@mui/material/Button'
+import SafetyCheckIcon from '@mui/icons-material/SafetyCheck'
 
 import List from '@mui/material/List'
 import ListItem from '@mui/material/ListItem'
@@ -16,7 +16,7 @@ import ListItemAvatar from '@mui/material/ListItemAvatar'
 import Avatar from '@mui/material/Avatar'
 import Typography from '@mui/material/Typography'
 
-const Rightbar = () => {
+const Rightbar = ({ udUser }) => {
   const trends = [
     {
       img: spaceshooter,
@@ -47,6 +47,16 @@ const Rightbar = () => {
   return (
     <>
       <div className="rightbarContent">
+        <p className="signed">Signed as</p>
+        <Button
+          variant="contained"
+          className="connected-btn"
+          endIcon={<SafetyCheckIcon />}
+        >
+          {udUser}
+        </Button>
+        <br />
+        <br />
         <Input
           label="Search decentralize"
           name="Search decentralize"

@@ -84,6 +84,6 @@ a:-webkit-any-link {
 }
 
 .logout-btn {
-    margin-left: 4rem !important;
-    margin-top: 1.3rem !important;
+    text-align: center;
+    margin-left: -4rem !important;
 }

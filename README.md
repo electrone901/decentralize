@@ -12,13 +12,11 @@ Decentralize is a social media platform like Reddit where users can share opinio
 
 ### Website Demo
 
--
+- https://decentralize.netlify.app/
 
 ### Video Demo
 
-UPDATE Video
-
--
+- https://youtu.be/tUR7WZUPNvE
 
 ### Person of contact
 
