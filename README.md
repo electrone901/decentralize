@@ -12,7 +12,7 @@ Decentralize is a social media platform like Reddit where users can share opinio
 
 ### Website Demo
 
-- https://decentralize.netlify.app/
+- https://decentralize-app.netlify.app/
 
 ### Video Demo
 
@@ -36,7 +36,6 @@ Overall, users will be able to:
 - Log in with Unstoppable Domains and Moralis
 - exchange views
 
-
 # How it's made
 
 Decentralize application makes use of the following softwares:
@@ -59,15 +58,13 @@ Decentralize application makes use of the following softwares:
 
 - `React Js, Material-ui, Web3` React Js for the frontend, Material-ui and Web3 to connect to blockchain.
 
-
-
 ## Available Scripts
+
 In the project directory, you can run:
 
 ### `yarn start`
 
 Runs the app in the development mode.
-
 
 ## Here is the steps I followed
 
